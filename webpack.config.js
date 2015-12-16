@@ -1,17 +1,18 @@
 module.exports = {
-  entry: {
-    main: ['./script1.js', './script2.js']
-  },
+  entry: './src/main.js',
   output: {
     path: __dirname,
-    filename: '[name].js'
+    filename: './public/[name].js'
   },
   module: {    
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
+        loader: 'babel',
         exclude: /node_modules/,
-        loader: 'babel'
+        query: {
+          presets: ['react', 'es2015']
+        }
       }
     ]
   }
