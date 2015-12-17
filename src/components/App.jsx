@@ -5,7 +5,7 @@ class App extends Component {
     super();
     this.state = {
       messages: [
-        'hi there!!',
+        'hi there!! Good Morning',
         'I am good and you?'
       ]
     };
@@ -15,7 +15,7 @@ class App extends Component {
     var count=0;
     var messageNodes = this.state.messages.map((message) => {
       return (
-          <div key={count++}>{message}</div>
+          <div style={{color:"green"}} key={count++}>{message}</div>
         );
     });
 
